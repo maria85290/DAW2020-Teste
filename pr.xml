@@ -19,18 +19,24 @@
      <p>
         Primeiro exercicio:
 
-          1) O processo de limpeza encontra-se no ficheiro data_clening.js.
-             Comecei por criar um objeto json com a coleção de dados casamento substituindo as occorrencia de ref por "ref" (usando o replace do visual studio).
-             Em seguida foi apenas percorrer cada elemento do objeto criado e criar um novo campo "_id" onde se colocou o conteudo de ref substituindo a "/"
-             por "_" . O resultado ficou guardado no ficheiro db.json. Neste ficheiro foi necessario retirar o nome da coleção e os { }  iniciais e finais
-             colocando no formato aceite pela base de dados mongoDB. 
+          1) Em primeiro lugar foi necessario substituir todas as ococrrencias de title, date, ref e href por:  "title", "date", "ref" e "href".
+          Para isso usei a funcionalidade de replace do visual studio. Em seguida corregi manualmente 3 erros que o ficheiro continha (2 faltas
+          de aspas e 1 falta de virgulas).
+          Em seguida realizaram-se as alterações sugeridas recorrendo ao ficheiro limpeza.js. Neste ficheiro, recorreu-se a função split(), 
+          para dividir as strings e obter os campos pretendidos. Adicionou-se ao dataset original os campos: pai, mãe, id, nome (nome do individo
+          batizado).
 
+          O resultado final, que foi importado para a base de dados encontra-se no ficheiro db.json.
+          
           2) --------
 
-          3) mongoimport --db Casamentos --collection casamentos --jsonArray db.json
+          3) mongoimport --db Batizados --collection batizados --jsonArray db.json
 
           O servidor criado responde na porta 7000.
-          As rotaas : GET /api/casamentos?byAno=true e GET /api/casamentos/noivos não ficaram a funcionar.
+          Para executar basta fazer: npm i
+                                     npm start
+
+          A rota : GET /api/batismos/stats não foi implementada.
         
 
         Para o exercicio 2 (ex2):
