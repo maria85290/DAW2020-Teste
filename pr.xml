@@ -22,10 +22,9 @@
           1) Em primeiro lugar foi necessario substituir todas as ococrrencias de title, date, ref e href por:  "title", "date", "ref" e "href".
           Para isso usei a funcionalidade de replace do visual studio. Em seguida corregi manualmente 3 erros que o ficheiro continha (2 faltas
           de aspas e 1 falta de virgulas).
-          Em seguida realizaram-se as alterações sugeridas recorrendo ao ficheiro limpeza.js. Neste ficheiro, recorreu-se a função split(), 
+          Em seguida realizei as alterações sugeridas recorrendo ao ficheiro limpeza.js. Neste ficheiro, recorreu-se a função split(), 
           para dividir as strings e obter os campos pretendidos. Adicionou-se ao dataset original os campos: pai, mãe, id, nome (nome do individo
           batizado).
-
           O resultado final, que foi importado para a base de dados encontra-se no ficheiro db.json.
           
           2) --------
@@ -38,12 +37,11 @@
 
           A rota : GET /api/batismos/stats não foi implementada.
         
-
+     </p>
+     <p>
         Para o exercicio 2 (ex2):
             AQUECIMENTO:
-            comecei por obter o token de acesso fazendo POST  http://clav-api.di.uminho.pt/v2/users/login e obtive as respostas:
-               
-              --> A classe 900 não tem descendencia nivel 3.
+              --> A classe 900 não tem descendencia nivel 3. Só tem duas classes nivel 2.
 
                --> Estão catalogados 637 entidades.
 
@@ -51,7 +49,7 @@
 
                --> Existem 5 processos (classes de nível 3) relacionados com 900.10.505.
 
-            Em seguida criou-se um servidor nodejs a responder na porta 7700, para responder às questões pedidas no enunciado.
+            Em seguida criou-se um servidor nodejs a responder na porta 7000, para responder às questões pedidas no enunciado.
             O pedido de token é feito no arranque da app (em app.js).
             
             Para executar deve fazer-se: npm i 
@@ -60,8 +58,8 @@
      
  </abstract>
     <deliverables>
-        <link url= "https://github.com/maria85290/DAW2020/blob/main/T7"> ex1 </link>
-        <link url= "https://github.com/maria85290/DAW2020/blob/main/T7/DAW2020.json"> ex2</link>
+        <link url= "https://github.com/maria85290/DAW2020-Teste/tree/main/ex1"> ex1 </link>
+        <link url= "https://github.com/maria85290/DAW2020-Teste/tree/main/ex2"> ex2</link>
 
  </deliverables>
 </pr>

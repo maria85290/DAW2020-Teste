@@ -33,7 +33,7 @@ module.exports.listarAno = (ano) => {
         .exec()
 }
 
-// Listr todos os batizados
+// Listar todos os batizados
 module.exports.listarBatizados = (nome) =>{
     return Batizado
     .find({},{_id:0,nome:1})
