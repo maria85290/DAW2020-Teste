@@ -48,7 +48,6 @@
             Em seguida criou-se um servidor nodejs a responder na porta 7700, para responder às questões pedidas no enunciado.
             O pedido de token é feito no arranque da app (em app.js).
             
-
             Para executar deve fazer-se: npm i 
                                          npm start       
       </p>  

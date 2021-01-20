@@ -1,0 +1,36 @@
+extends layout
+
+block content
+    .w3-card-4
+      header.w3-container.w3-light-green
+        h3.w3-center Classe: #{elem.titulo}
+
+      .w3-container
+        ul
+          li Titulo: #{elem.titulo}
+          li Nivel: #{elem.nivel}
+          li Estado: #{elem.status}
+          li codigo:  #{elem.codigo}
+          li Descriçao: #{elem.descricao}
+          li id: #{elem.id}
+          li Descendência: 
+            ol 
+              each e in elem.filhos
+                li ª 
+                p - Código: 
+                   a(href="http://localhost:7000/classe/c" + e.codigo)= e.codigo
+                p - Titulo: #{e.titulo}
+                p - Id: #{e.id} 
+                p - Status #{e.status}
+          if elem.nivel === 3
+            li Termos Indice:
+                ol 
+                 each e in elem.termosInd
+                        li ª 
+                        p - Id Termo Indice: #{e.idTI}
+                        p - Termo: 
+                           a(href="http://localhost:7000/termosIndice")= e.termo
+    footer.w3-container.w3-light-green
+      p
+      address Gerado por dawApp :: 2021-Jan, Maria 
+      a(href="/") Pagina Inicial

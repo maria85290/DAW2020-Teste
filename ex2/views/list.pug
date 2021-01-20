@@ -1,0 +1,26 @@
+extends layout
+
+block content
+    .w3-card-4
+      header.w3-container.w3-light-green
+        h2.w3-center Lista de Classes nivel 1:
+      if lista.length > 0
+        .w3-container 
+          table.w3-table-all
+            tr 
+              th Codigo
+              th Título
+            each elem in lista
+              tr
+                td
+                  a(href="http://localhost:7000/classe/c" + elem.codigo)= elem.codigo   
+                td
+                  a(href="http://localhost:7000/classe/c" + elem.codigo)=  elem.titulo
+      else
+        .w3-container
+          p Não existem entidades registadas
+      footer.w3-container.w3-light-green
+        address Gerado por dawApp :: 2021-JAN, Maria
+        a(href="/") Pagina Inicial
+
+  

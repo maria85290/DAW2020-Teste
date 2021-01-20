@@ -1,0 +1,26 @@
+extends layout
+
+block content
+    .w3-card-4
+      header.w3-container.w3-light-green
+        h2.w3-center Lista de Termos:
+      if lista.length > 0
+        .w3-container 
+          table.w3-table-all
+            tr 
+              th Termo:
+              th Id da classe:
+              th Titulo Classe:
+            each elem in lista
+              tr
+                td #{elem.termo}
+                td
+                  a(href="http://localhost:7000/classe/" + elem.codigoClasse)= elem.codigoClasse
+                td
+                  a(href="http://localhost:7000/classe/" + elem.codigoClasse)=  elem.tituloClasse
+      else
+        .w3-container
+          p Não existem entidades registadas
+      footer.w3-container.w3-light-green
+        address Gerado por dawApp :: 2021-JAN, Maria
+        a(href="/") Pagina Inicial
