@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="pr.css"?>
+<pr>
+ <meta>
+     <key>DAW2021::Teste</key>
+     <title>Teste de DAW</title>
+     <bdate> 20.01.2021 </bdate>
+     <edate> 20.01.2021 </edate>
+     <supervisor url= "http://www4.di.uminho.pt/~jcr/"> José Carlos Ramalho </supervisor>
+ </meta>  
+ <team>
+     <member id ="pg42844">
+         <name>Maria Laura de Araújo Barbosa</name>
+         <email>pg42844@alunos.uminho.pt</email>
+         <url> "https://github.com/maria85290" </url>
+     </member>
+ </team>
+ <abstract>
+     <p>
+        Primeiro exercicio:
+
+          1) O processo de limpeza encontra-se no ficheiro data_clening.js.
+             Comecei por criar um objeto json com a coleção de dados casamento substituindo as occorrencia de ref por "ref" (usando o replace do visual studio).
+             Em seguida foi apenas percorrer cada elemento do objeto criado e criar um novo campo "_id" onde se colocou o conteudo de ref substituindo a "/"
+             por "_" . O resultado ficou guardado no ficheiro db.json. Neste ficheiro foi necessario retirar o nome da coleção e os { }  iniciais e finais
+             colocando no formato aceite pela base de dados mongoDB. 
+
+          2) --------
+
+          3) mongoimport --db Casamentos --collection casamentos --jsonArray db.json
+
+          O servidor criado responde na porta 7000.
+          As rotaas : GET /api/casamentos?byAno=true e GET /api/casamentos/noivos não ficaram a funcionar.
+        
+
+        Para o exercicio 2 (ex2):
+            AQUECIMENTO:
+            comecei por obter o token de acesso fazendo POST  http://clav-api.di.uminho.pt/v2/users/login e obtive as respostas:
+               
+              --> A classe 900 não tem descendencia nivel 3.
+
+               --> Estão catalogados 637 entidades.
+
+               -->  Existem 8 processos na descendencia 900.10.
+
+               --> Existem 5 processos (classes de nível 3) relacionados com 900.10.505.
+
+            Em seguida criou-se um servidor nodejs a responder na porta 7700, para responder às questões pedidas no enunciado.
+            O pedido de token é feito no arranque da app (em app.js).
+            
+
+            Para executar deve fazer-se: npm i 
+                                         npm start       
+      </p>  
+     
+ </abstract>
+    <deliverables>
+        <link url= "https://github.com/maria85290/DAW2020/blob/main/T7"> ex1 </link>
+        <link url= "https://github.com/maria85290/DAW2020/blob/main/T7/DAW2020.json"> ex2</link>
+
+ </deliverables>
+</pr>
